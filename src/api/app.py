@@ -31,4 +31,5 @@ def predict() -> str:
         return json.dumps({"error": "CHECK INPUT"}), 400
     except:
         return json.dumps({"error": "PREDICTION FAILED"}), 500
-app.run()
+if __name__ == '__main__':
+    app.run(port = 5000, debug=True)
