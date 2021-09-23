@@ -12,7 +12,7 @@ def process_input(request_data: str) -> np.array:
     return parsed_body
 
 working_dir = os. getcwd()
-SAVED_MODEL_PATH = working_dir + "\\app\\models\\model.pkl"
+SAVED_MODEL_PATH = working_dir + "/app/models/model.pkl"
 
 model = pickle.load(open(SAVED_MODEL_PATH, "rb"))
 
