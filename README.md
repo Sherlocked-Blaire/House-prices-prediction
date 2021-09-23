@@ -38,4 +38,4 @@ print(resp.status_code, resp.content)
 ```
 
 ## License
-The MIT License - Copyright (c) 2021 - Blessing Ehizojie-Philips
+The MIT License - Copyright (c) 2021 - Blessing Agadagba
