@@ -11,8 +11,6 @@ def process_input(request_data: str) -> np.array:
     return parsed_body
 
 SAVED_MODEL_PATH = "House-prices-prediction\src\models\model.pkl"
-
-# LOADING THE CLASSIFIER FROM FILE
 model = pickle.load(open(SAVED_MODEL_PATH, "rb"))
 
 app = Flask(__name__)
@@ -31,5 +29,3 @@ def predict() -> str:
         return json.dumps({"error": "CHECK INPUT"}), 400
     except:
         return json.dumps({"error": "PREDICTION FAILED"}), 500
-if __name__ == '__main__':
-    app.run(port = 5000, debug=True)
