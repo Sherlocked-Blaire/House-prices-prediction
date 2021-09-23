@@ -3,6 +3,7 @@ from flask import request
 import pickle
 import numpy as np
 import json
+import os
 
 
 def process_input(request_data: str) -> np.array:
@@ -10,7 +11,9 @@ def process_input(request_data: str) -> np.array:
     assert len(parsed_body.shape) == 2, "'inputs' must be a 2-d array"
     return parsed_body
 
-SAVED_MODEL_PATH = "app\models\model.pkl"
+working_dir = os. getcwd()
+SAVED_MODEL_PATH = working_dir + "\\app\\models\\model.pkl"
+
 model = pickle.load(open(SAVED_MODEL_PATH, "rb"))
 
 app = Flask(__name__)
