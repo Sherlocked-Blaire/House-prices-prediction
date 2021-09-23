@@ -1,15 +1,12 @@
-# House-prices-prediction
+# House Price Prediction Flask Application
 ## Description
 This project involves building a machine learning model  to predict house prices and deploying it to the cloud(heroku)
-# House Prediction Flask Application
-
-
 
 ## Getting Started
 The app api can be found here - [House Prediction API](https://bhouse-prices-prediction.herokuapp.com/).
 To predict house prices using the app, send a post request [here]( https://bhouse-prices-prediction.herokuapp.com/predict).
 The predict endpoint takes only POST requests and request made to the endpoint should come with ```features```
-as part of the request data. The endpoint can predict up to 2 prices per request.
+as part of the request data. 
 
 ## Usage
 Post request should be made using a list with 13 numbers. 2 lists can also be passed into the request.
