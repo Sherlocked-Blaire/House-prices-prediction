@@ -40,5 +40,5 @@ def test_predict_multiple(app, client):
        4.980e+00]]})
     response = client.post('/predict', data=data)
     assert response.status_code == 200
-    expected = {"predicted price": [19.1]}
+    expected = {"predicted price": [19.1, 24.0, 24.0]}
     assert expected == json.loads(response.get_data())    
